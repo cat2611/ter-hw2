@@ -31,8 +31,23 @@ variable "vpc_name" {
 
 ###ssh vars
 
-variable "vms_ssh_root_key" {
+#variable "vms_ssh_root_key" {
+#  type        = string
+#  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOp0ilrOrOqMz7peK+9SxZpI6ZrIuk/qudm1JbnVKCR root@lyndsey"
+#  description = "ssh-keygen -t ed25519"
+#}
+
+### Переменные для демо интерполяции
+
+# variables.tf
+variable "project" {
   type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOp0ilrOrOqMz7peK+9SxZpI6ZrIuk/qudm1JbnVKCR root@lyndsey"
-  description = "ssh-keygen -t ed25519"
+  description = "Project name"
+  default     = "netology"
+}
+
+variable "environment" {
+  type        = string
+  description = "Environment name"
+  default     = "develop"
 }
